@@ -1,0 +1,164 @@
+[gd_scene load_steps=23 format=3 uid="uid://t1onunvexsvp"]
+
+[ext_resource type="Script" path="res://Results Screen/Scripts/results_screen.gd" id="1_5y5i7"]
+[ext_resource type="Texture2D" uid="uid://ddttp3umkc26x" path="res://Results Screen/Images/background.jpg" id="1_t3g2p"]
+[ext_resource type="Script" path="res://Results Screen/Scripts/http_request.gd" id="2_hk6yg"]
+[ext_resource type="Texture2D" uid="uid://c15mc3r8hcadc" path="res://Main Menu/Images/fadeout.png" id="3_g1chf"]
+[ext_resource type="Theme" uid="uid://bfhdii4q4yvvb" path="res://Themes/buttons_and_checkboxes.tres" id="4_yp0bf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb65e"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(3270, 2700, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exe44"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(2180, 2700, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_www7c"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(1090, 2700, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqwvu"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(0, 2700, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxjb2"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(3270, 1800, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfeae"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(2180, 1800, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4wjx"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(1090, 1800, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa1kg"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(0, 1800, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ar5"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(3270, 900, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prf1t"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(2180, 900, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ytqh"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(1090, 900, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj35a"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(0, 900, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34v7e"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(3270, 0, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4xug"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(2180, 0, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrtxt"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(1090, 0, 1090, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c800a"]
+atlas = ExtResource("3_g1chf")
+region = Rect2(0, 0, 1090, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxy7e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb65e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exe44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_www7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqwvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxjb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfeae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4wjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa1kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ar5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prf1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ytqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj35a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34v7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4xug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrtxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c800a")
+}],
+"loop": false,
+"name": &"fadeIn",
+"speed": 10.0
+}]
+
+[node name="ResultsScreen" type="Node2D"]
+script = ExtResource("1_5y5i7")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("2_hk6yg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_t3g2p")
+
+[node name="Marquees" type="VBoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 420.0
+offset_bottom = 600.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="DiscordButton" type="Button" parent="."]
+visible = false
+offset_left = 900.0
+offset_top = 500.0
+offset_right = 1100.0
+offset_bottom = 600.0
+theme = ExtResource("4_yp0bf")
+text = "PUSH TO DISCORD"
+
+[node name="Fade" type="AnimatedSprite2D" parent="."]
+position = Vector2(597.5, 350.001)
+scale = Vector2(1.28899, 0.999998)
+sprite_frames = SubResource("SpriteFrames_rxy7e")
+animation = &"fadeIn"
+
+[connection signal="request_completed" from="HTTPRequest" to="HTTPRequest" method="_on_request_completed"]
+[connection signal="pressed" from="DiscordButton" to="." method="_on_discord_button_pressed"]

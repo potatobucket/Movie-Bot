@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+icon.svg
+*.import
+test.tscn
+test.gd
+TestStateMachine.gd
+tes811F.tmp
+test_export.exe

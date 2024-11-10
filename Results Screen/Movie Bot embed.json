@@ -1,0 +1,36 @@
+{
+  "content": "",
+  "tts": false,
+  "embeds": [
+	{
+	  "id": 314024867,
+	  "title": "Movie Night Order",
+	  "description": "That way we know who goes when!",
+	  "color": 8526558,
+	  "author": {
+		"name": "Whitney Bot",
+		"icon_url": "https://i.imgur.com/VRrFGCJ.png"
+	  },
+	  "fields": [
+		{
+		  "id": 62051993,
+		  "name": "Movie Night Order:",
+		  "value": "First\nSecond\nThird\nFourth\nFifth\nSixth",
+		  "inline": true
+		},
+		{
+		  "id": 343430455,
+		  "name": "Approx. Date:",
+		  "value": "01/01/2025\n01/08/2025\n01/15/2025\n01/22/2025\n01/29/2025\n02/05/2025",
+		  "inline": true
+		}
+	  ],
+	  "footer": {
+		"text": "Made by Oscar (potato_bucket)",
+		"icon_url": "https://i.imgur.com/C1JpKK7.jpg"
+	  }
+	}
+  ],
+  "components": [],
+  "actions": {}
+}
